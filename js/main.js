@@ -1,24 +1,7 @@
-const showHiddenPass = (loginPass, loginEye) => {
-  const input = document.getElementById(loginPass);
-  const iconEye = document.getElementById(loginEye);
+export function submitData() {
+  let form = document.getElementById("form");
 
-  iconEye.addEventListener("click", () => {
-    if (input.type === "password") {
-      input.type = "text";
-      iconEye.classList.add("ri-eye-line");
-      iconEye.classList.remove("ri-eye-off-line");
-    } else {
-      input.type = "password";
-      iconEye.classList.remove("ri-eye-line");
-      iconEye.classList.add("ri-eye-off-line");
-    }
-  });
-};
-
-const submitData = () => {
-  let form = document.getElementById("formLogin");
-
-  form.addEventListener("submit", function (event) {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let inputs = form.getElementsByTagName("input");
@@ -33,7 +16,4 @@ const submitData = () => {
 
     alert(message);
   });
-};
-
-showHiddenPass("login-pass", "login-eye");
-submitData();
+}

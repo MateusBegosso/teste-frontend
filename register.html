@@ -19,36 +19,93 @@
   </head>
 
   <body>
-    <section class="container">
-      <h1>Cadastro</h1>
+    <section>
+      <div class="component">
+        <img
+          src="./assets/wallpaper1.jpg"
+          alt="imagem de fundo"
+          class="component__img"
+        />
 
-      <form id="formRegister">
-        <div class="form-group">
-          <label for="name">Nome:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
+        <form id="form" class="component__form">
+          <h1 class="component__title">Cadastro</h1>
 
-        <div class="form-group">
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
+          <div class="component__content">
+            <div class="component__box">
+              <i class="ri-user-3-line component__icon"></i>
 
-        <div class="form-group">
-          <label for="tel">Telefone:</label>
-          <input type="tel" id="tel" name="tel" required />
-        </div>
+              <div class="component__box-input">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=" "
+                  class="component__input"
+                />
+                <label for="name" class="component__label">Nome</label>
+              </div>
+            </div>
+            <div class="component__box">
+              <i class="ri-mail-line component__icon"></i>
 
-        <div class="form-group">
-          <label for="cpf">CPF:</label>
-          <input type="text" id="cpf" name="cpf" required />
-        </div>
+              <div class="component__box-input">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder=" "
+                  class="component__input"
+                />
+                <label for="email" class="component__label">E-mail</label>
+              </div>
+            </div>
 
-        <button type="submit">Cadastrar</button>
-      </form>
+            <div class="component__box">
+              <i class="ri-cellphone-line component__icon"></i>
 
-      <p>Já tem cadastro? Clique <a href="login.html">aqui</a> para entrar.</p>
+              <div class="component__box-input">
+                <input
+                  type="text"
+                  id="tel"
+                  name="tel"
+                  required
+                  placeholder=" "
+                  maxlength="14"
+                  class="component__input"
+                />
+                <label for="tel" class="component__label">Telefone</label>
+              </div>
+            </div>
+
+            <div class="component__box">
+              <i class="ri-pass-valid-line component__icon"></i>
+
+              <div class="component__box-input">
+                <input
+                  type="text"
+                  id="cpf"
+                  name="cpf"
+                  maxlength="14"
+                  required
+                  placeholder=" "
+                  class="component__input"
+                />
+                <label for="cpf" class="component__label">CPF</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="component__button" id="submit-button">Entrar</button>
+          <p class="component__register">
+            Já tem cadastro?</br> Clique
+            <a href="login.html">aqui</a> para entrar.
+          </p>
+        </form>
+      </div>
     </section>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="./js/register.js"></script>
   </body>
 </html>
